@@ -34,6 +34,11 @@ new mongoose.Schema({
     default: "unknown"
   },
 
+  era: {
+    type: String,
+    default: "Unknown"
+  },
+
   isTrending: {
     type: Boolean,
     default: false

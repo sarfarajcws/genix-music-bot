@@ -74,6 +74,8 @@ async function saveQueuedSongs(
 
   let artist = "unknown";
 
+  let era = "unknown";
+
   let isTrending = false;
 
   tags.forEach(tag => {
@@ -113,6 +115,11 @@ async function saveQueuedSongs(
       artist = value;
 
     }
+
+    else if (
+      ["80s", "90s", "2000s", "2010s", "2020s"].includes(value)
+
+    ) {era = value}
 
     // 🔥 Trending
     else if (
@@ -160,6 +167,8 @@ async function saveQueuedSongs(
       language,
 
       artist,
+
+      era,
 
       isTrending
 

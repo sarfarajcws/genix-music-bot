@@ -33,6 +33,18 @@ async function getSongsByArtist(
 
 }
 
+async function getSongsByEra(
+  era
+) {
+
+  return await Song.find({
+
+    era
+  }).sort({
+      createdAt: -1
+  });
+}
+
 async function getTrendingSongs() {
 
   return await Song.find({
@@ -68,6 +80,8 @@ module.exports = {
   getSongsByLanguage,
 
   getSongsByArtist,
+
+  getSongsByEra,
 
   getTrendingSongs,
 
